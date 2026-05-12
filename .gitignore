@@ -1,0 +1,11 @@
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with a carriage return in Finder, so use a wildcard.
+Icon?
+
+._*
+.Spotlight-V100
+.Trashes
+.fseventsd
