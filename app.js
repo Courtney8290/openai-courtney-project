@@ -61,54 +61,10 @@ const roleSignals = [
   }
 ];
 
-const progressionSteps = [
-  {
-    role: "Product Deployment Specialist",
-    company: "Benchling",
-    period: "Apr 2022 - Mar 2023",
-    learned: "Learned how to translate complex scientific workflows into scalable product configurations tied to business outcomes.",
-    proof: "9.8/10 NPS and 4.8/5 CSAT across customer engagements.",
-    openai: "OpenAI relevance: discovery starts with workflow fluency, not a script."
-  },
-  {
-    role: "Senior Sales Development Representative",
-    company: "Benchling",
-    period: "Mar 2023 - Mar 2024",
-    learned: "Built the outbound muscle: account mapping, executive engagement, signal-based prospecting, and multi-threaded campaigns.",
-    proof: "221% quota attainment and $7.5M sourced pipeline as Benchling's top SDR in 2023.",
-    openai: "OpenAI relevance: proven ability to create qualified enterprise pipeline from targeted outbound."
-  },
-  {
-    role: "Founding Strategic Account Manager",
-    company: "Benchling",
-    period: "Apr 2024 - Sep 2024",
-    learned: "Learned the full lifecycle after the first meeting: adoption, renewal, expansion, portfolio prioritization, and customer health.",
-    proof: "Managed 200 accounts across a $3M quarterly ARR portfolio with 93% gross renewal retention.",
-    openai: "OpenAI relevance: qualifies opportunities with downstream adoption and expansion in mind."
-  },
-  {
-    role: "Strategic Account Executive",
-    company: "Benchling",
-    period: "Oct 2024 - Oct 2025",
-    learned: "Carried a quota, sourced pipeline, mentored sellers, and partnered with early AI adopters on adoption strategy and product feedback.",
-    proof: "120% quota attainment and $1.5M sourced pipeline.",
-    openai: "OpenAI relevance: knows what an AE needs from an SDR handoff because she has owned the number."
-  },
-  {
-    role: "Commercial Account Executive",
-    company: "Chainguard",
-    period: "Feb 2026 - Present",
-    learned: "Sells software supply chain and open-source security to engineering, security, platform, and DevSecOps leaders.",
-    proof: "Current new-logo acquisition motion across healthcare and life sciences accounts.",
-    openai: "OpenAI relevance: already speaks with the technical and security buyers who shape enterprise AI adoption."
-  }
-];
-
 let activeSignal = 0;
 
 const signalList = document.querySelector("#signalList");
 const proofPanel = document.querySelector("#proofPanel");
-const progressionTimeline = document.querySelector("#progressionTimeline");
 
 function renderSignals() {
   signalList.innerHTML = roleSignals
@@ -150,23 +106,5 @@ function renderProof() {
   `;
 }
 
-function renderProgression() {
-  progressionTimeline.innerHTML = progressionSteps
-    .map((step, index) => `
-      <article class="progression-step">
-        <div class="step-marker">${String(index + 1).padStart(2, "0")}</div>
-        <div class="step-body">
-          <div class="step-meta">${step.company} | ${step.period}</div>
-          <h3>${step.role}</h3>
-          <p><strong>What I learned:</strong> ${step.learned}</p>
-          <p><strong>Proof:</strong> ${step.proof}</p>
-          <p><strong>${step.openai}</strong></p>
-        </div>
-      </article>
-    `)
-    .join("");
-}
-
 renderSignals();
 renderProof();
-renderProgression();

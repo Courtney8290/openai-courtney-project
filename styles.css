@@ -107,9 +107,7 @@ h3 {
 .metric-card,
 .lauren-brief,
 .proof-panel,
-.progression-step,
-.proof-card,
-.plan-grid article {
+.proof-card {
   background: var(--panel);
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -201,7 +199,6 @@ h3 {
   color: var(--white);
 }
 
-.mission-strip,
 .closing-band {
   padding: 46px 54px;
   background: #e4ddca;
@@ -209,15 +206,13 @@ h3 {
   border-bottom: 1px solid var(--line);
 }
 
-.mission-strip p,
 .closing-band p {
   max-width: 1260px;
   margin: 0;
   font-size: clamp(1.05rem, 1.35vw, 1.28rem);
 }
 
-.split-section,
-.plan-section {
+.split-section {
   padding: 86px 54px;
 }
 
@@ -354,45 +349,6 @@ h3 {
   font-size: 1.06rem;
 }
 
-.progression-timeline {
-  display: grid;
-  gap: 14px;
-}
-
-.progression-step {
-  display: grid;
-  grid-template-columns: 56px minmax(0, 1fr);
-  gap: 20px;
-  padding: 24px;
-}
-
-.step-marker {
-  display: grid;
-  place-items: center;
-  width: 56px;
-  height: 56px;
-  background: var(--green);
-  color: #e6f5d8;
-  font-weight: 950;
-}
-
-.step-meta {
-  margin-bottom: 8px;
-  color: var(--rust);
-  font-size: 0.84rem;
-  font-weight: 900;
-  text-transform: uppercase;
-}
-
-.step-body h3 {
-  font-size: 1.65rem;
-}
-
-.step-body p {
-  margin: 8px 0 0;
-  color: var(--muted);
-}
-
 .proof-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -420,37 +376,6 @@ h3 {
   color: #266344;
   font-size: 1.02rem;
   font-weight: 900;
-}
-
-.plan-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
-}
-
-.plan-grid article {
-  min-height: 270px;
-  padding: 28px;
-}
-
-.plan-grid span {
-  display: inline-grid;
-  place-items: center;
-  width: 48px;
-  height: 48px;
-  margin-bottom: 30px;
-  background: var(--green);
-  color: #e6f5d8;
-  font-size: 1.16rem;
-  font-weight: 950;
-}
-
-.plan-grid h3 {
-  font-size: 1.35rem;
-}
-
-.plan-grid p {
-  color: var(--muted);
 }
 
 .closing-band {
@@ -535,8 +460,6 @@ h3 {
 @media (max-width: 760px) {
   .command-hero,
   .split-section,
-  .plan-section,
-  .mission-strip,
   .closing-band {
     padding-left: 20px;
     padding-right: 20px;
@@ -554,17 +477,12 @@ h3 {
 
   .status-grid,
   .proof-stats,
-  .beyond-grid,
-  .plan-grid {
+  .beyond-grid {
     grid-template-columns: 1fr;
   }
 
   .signal-button {
     min-height: 82px;
-  }
-
-  .progression-step {
-    grid-template-columns: 1fr;
   }
 }
 
